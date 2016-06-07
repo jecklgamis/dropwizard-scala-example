@@ -9,6 +9,7 @@ import com.fasterxml.jackson.datatype.joda.JodaModule
 import com.fasterxml.jackson.jaxrs.json.JacksonJaxbJsonProvider
 import com.fasterxml.jackson.module.scala.DefaultScalaModule
 import dropwizard.scala.example.GuiceInjector.{withInjector, wrap}
+import dropwizard.scala.example.filter.DiagnosticContextFilter
 import io.dropwizard.setup.Environment
 import org.glassfish.jersey.filter.LoggingFilter
 
@@ -28,6 +29,7 @@ class ExampleApp extends io.dropwizard.Application[ExampleAppConfig] {
     }
     env.jersey.register(jacksonJaxbJsonProvider)
     env.jersey.register(new LoggingFilter)
+    env.jersey.register(new DiagnosticContextFilter)
   }
 
   private def jacksonJaxbJsonProvider: JacksonJaxbJsonProvider = {
