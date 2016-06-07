@@ -1,0 +1,58 @@
+Dropwizard Scala Example
+========================
+Jerrico Gamis <jecklgamis@gmail.com>
+:Author Initials: JG
+:toc:
+:icons:
+:website: http://github.com/jecklgamis/dropwizard-scala-example
+
+About
+-----
+This is an example Dropwizard app using Scala.
+
+* Dropwizard 0.9.2
+* Scala-2.12.0-M4
+* Java 8
+* Maven 3
+* Guice dependency injection
+* JSON and XML serialization using Java and Scala entities
+* Example resource , health check, filter.
+
+Running The App
+---------------
+
+-----
+mvn clean package
+java -jar target/dropwizard-scala-example.jar server src/main/resources/config.yml
+-----
+
+XML and JSON Serialization Examples
+-----------------------------------
+
+Example (serialize plain Java/Scala object to JSON)
+----
+curl -v http://127.0.0.1:8080/scala/json
+curl -v http://127.0.0.1:8080/java/json
+----
+
+Example (serialize Java/Scala entity with JAXB annotation to XML)
+----
+curl -v http://127.0.0.1:8080/scala/xml
+curl -v http://127.0.0.1:8080/java/xml
+----
+
+Example (serialize Java/Scala entity with JAXB annotation to either JSON or XML)
+----
+curl -v -H "Accept:application/json" http://127.0.0.1:8080/scala
+curl -v -H "Accept:application/xml" http://127.0.0.1:8080/scala
+curl -v -H "Accept:application/json" http://127.0.0.1:8080/java
+curl -v -H "Accept:application/xml" http://127.0.0.1:8080/java
+----
+
+
+
+
+
+
+
+
