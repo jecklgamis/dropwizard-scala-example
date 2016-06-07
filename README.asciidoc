@@ -6,6 +6,8 @@ Jerrico Gamis <jecklgamis@gmail.com>
 :icons:
 :website: http://github.com/jecklgamis/dropwizard-scala-example
 
+image:https://travis-ci.org/jecklgamis/dropwizard-scala-example.svg?branch=master[Build Status,link=https://travis-ci.org/jecklgamis/dropwizard-scala-example]
+
 About
 -----
 This is an example Dropwizard app using Scala.
