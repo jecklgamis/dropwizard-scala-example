@@ -7,7 +7,6 @@ import javax.ws.rs.{GET, Path, Produces}
 import dropwizard.scala.example.api.{User, UserPojo, UserPojoWithJaxbAnnotation, UserWithJaxbAnnotation}
 import org.joda.time.DateTime
 
-@Path("/")
 class ExampleResource {
 
   @GET
