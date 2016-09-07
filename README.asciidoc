@@ -53,22 +53,22 @@ XML and JSON Serialization Examples
 
 Example (serialize plain Java/Scala object to JSON)
 ----
-curl -v http://127.0.0.1:8080/scala/json
-curl -v http://127.0.0.1:8080/java/json
+curl -v http://127.0.0.1:8080/example/scala/json
+curl -v http://127.0.0.1:8080/example/java/json
 ----
 
 Example (serialize Java/Scala entity with JAXB annotation to XML)
 ----
-curl -v http://127.0.0.1:8080/scala/xml
-curl -v http://127.0.0.1:8080/java/xml
+curl -v http://127.0.0.1:8080/example/scala/xml
+curl -v http://127.0.0.1:8080/example/java/xml
 ----
 
 Example (serialize Java/Scala entity with JAXB annotation to either JSON or XML)
 ----
-curl -v -H "Accept:application/json" http://127.0.0.1:8080/scala
-curl -v -H "Accept:application/xml" http://127.0.0.1:8080/scala
-curl -v -H "Accept:application/json" http://127.0.0.1:8080/java
-curl -v -H "Accept:application/xml" http://127.0.0.1:8080/java
+curl -v -H "Accept:application/json" http://127.0.0.1:8080/example/scala
+curl -v -H "Accept:application/xml" http://127.0.0.1:8080/example/scala
+curl -v -H "Accept:application/json" http://127.0.0.1:8080/example/java
+curl -v -H "Accept:application/xml" http://127.0.0.1:8080/example/java
 ----
 
 

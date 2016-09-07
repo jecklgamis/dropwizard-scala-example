@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>io.jecklgamis</groupId>
+    <groupId>com.jecklgamis</groupId>
     <artifactId>dropwizard-scala-example</artifactId>
     <packaging>jar</packaging>
     <version>1.0-SNAPSHOT</version>
@@ -12,7 +12,7 @@
     <properties>
         <dropwizard.version>1.0.0</dropwizard.version>
         <scala.version>2.12.0-M5</scala.version>
-        <jackson.version>2.7.4</jackson.version>
+        <jackson.version>2.7.6</jackson.version>
     </properties>
 
     <dependencies>
@@ -85,13 +85,13 @@
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.module</groupId>
-            <artifactId>jackson-module-scala_2.12.0-M4</artifactId>
+            <artifactId>jackson-module-scala_2.12.0-M5</artifactId>
             <version>${jackson.version}</version>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.datatype</groupId>
             <artifactId>jackson-datatype-jdk8</artifactId>
-            <version>2.8.1</version>
+            <version>${jackson.version}</version>
         </dependency>
         <dependency>
             <groupId>org.scalatest</groupId>
