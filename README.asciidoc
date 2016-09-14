@@ -13,7 +13,7 @@ About
 This is an example Dropwizard app using Scala.
 
 * Dropwizard 1.0.0
-* Scala-2.12.0-M5
+* Scala-2.12.0-RC1
 * Java 8
 * Maven 3
 * Guice dependency injection

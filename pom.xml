@@ -11,7 +11,7 @@
 
     <properties>
         <dropwizard.version>1.0.0</dropwizard.version>
-        <scala.version>2.12.0-M5</scala.version>
+        <scala.version>2.12.0-RC1</scala.version>
         <jackson.version>2.7.6</jackson.version>
     </properties>
 
@@ -66,7 +66,7 @@
         <dependency>
             <groupId>com.google.inject.extensions</groupId>
             <artifactId>guice-multibindings</artifactId>
-            <version>4.0</version>
+            <version>4.1.0</version>
         </dependency>
         <dependency>
             <groupId>com.google.guava</groupId>
@@ -95,8 +95,8 @@
         </dependency>
         <dependency>
             <groupId>org.scalatest</groupId>
-            <artifactId>scalatest_2.12.0-M4</artifactId>
-            <version>3.0.0-RC3</version>
+            <artifactId>scalatest_2.12.0-M5</artifactId>
+            <version>3.0.0</version>
             <scope>test</scope>
         </dependency>
         <dependency>
