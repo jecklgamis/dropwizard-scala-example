@@ -1,4 +1,4 @@
-FROM jecklgamis/ubuntu-14.04:latest
+FROM jecklgamis/ubuntu-16.04:latest
 MAINTAINER Jerrico Gamis <jecklgamis@gmail.com>
 
 RUN groupadd -r apprunner && useradd -r -gapprunner apprunner
