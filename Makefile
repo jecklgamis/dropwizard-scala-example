@@ -1,12 +1,10 @@
 default:
 	cat ./Makefile
-dist: jar docker-image
-	@echo All done
-jar:
+dist:
 	mvn clean package
-docker-image:
-	docker build -t dropwizard-scala-example .
-docker-run:
-	docker run -p 8080:8080 dropwizard-scala-example
-docker-run-bash:
-	docker run -i -t dropwizard-scala-example /bin/bash
+image:
+	docker build -t jecklgamis/dropwizard-scala-example:latest .
+run:
+	docker run -p 80:8080  -p 8081:8081 jecklgamis/dropwizard-scala-example:latest
+run-bash:
+	docker run -i -t jecklgamis/dropwizard-scala-example:latest /bin/bash
