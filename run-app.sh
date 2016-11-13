@@ -1,3 +1,5 @@
-#!/usr/bin/env bash
+#!/bin/bash
 set -ex
-java -jar target/dropwizard-scala-example.jar server src/main/resources/config.yml
+cd /usr/local/app
+exec java -jar "bin/dropwizard-scala-example.jar" server "config/config.yml"
+
