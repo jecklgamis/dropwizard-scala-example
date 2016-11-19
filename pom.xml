@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
@@ -10,9 +11,9 @@
     <name>dropwizard-scala-example</name>
 
     <properties>
-        <dropwizard.version>1.0.2</dropwizard.version>
-        <scala.version>2.12.0-RC1</scala.version>
-        <jackson.version>2.7.6</jackson.version>
+        <dropwizard.version>1.0.4</dropwizard.version>
+        <scala.version>2.12.0</scala.version>
+        <jackson.version>2.7.8</jackson.version>
     </properties>
 
     <dependencies>
@@ -69,11 +70,6 @@
             <version>4.1.0</version>
         </dependency>
         <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-            <version>19.0</version>
-        </dependency>
-        <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
             <version>${jackson.version}</version>
@@ -85,7 +81,7 @@
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.module</groupId>
-            <artifactId>jackson-module-scala_2.12.0-M5</artifactId>
+            <artifactId>jackson-module-scala_2.12.0-RC1</artifactId>
             <version>${jackson.version}</version>
         </dependency>
         <dependency>
