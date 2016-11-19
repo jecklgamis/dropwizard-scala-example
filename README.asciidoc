@@ -12,13 +12,14 @@ About
 -----
 This is an example Dropwizard app using Scala.
 
-* Dropwizard 1.0.0
-* Scala-2.12.0-RC1
+* Dropwizard 1.0.4
+* Scala-2.12.0
 * Java 8
 * Maven 3
 * Guice dependency injection
 * JSON and XML serialization using Java and Scala entities
 * Example resource , health check, filter.
+
 
 Running The App
 ---------------
@@ -31,22 +32,19 @@ Running The App In Docker
 -------------------------
 This assumes you have a working docker environment
 
-.Create docker image
-----
-docker build -t dropwizard-scala-example .
-----
-
 .Run the app inside docker
 ----
+mvn clean package
+docker build -t dropwizard-scala-example .
 docker run dropwizard-scala-example
 ----
 
-.Run bash shell inside docker (you know, to check some stuff)
+.Run bash shell inside Docker (you know, to check some stuff)
 ----
 docker run -i -t dropwizard-scala-example /bin/bash
 ----
 
-Feeling lazy typing? type `make`. You'll find `make dist docker-run` handy.
+TIP: `make dist image run` builds and runs docker image.
 
 XML and JSON Serialization Examples
 -----------------------------------
