@@ -5,7 +5,7 @@ RUN apt-get update -y && apt-get install -y supervisor
 RUN groupadd -r app && useradd -r -gapp app
 RUN mkdir -m 0755 -p /usr/local/app/bin
 RUN mkdir -m 0755 -p /usr/local/app/config
-RUN mkdir -m 0755 -p /usr/app/logs/
+RUN mkdir -m 0755 -p /usr/local/app/logs/
 
 COPY target/dropwizard-scala-example.jar /usr/local/app/bin
 COPY run-app.sh /usr/local/app/bin
