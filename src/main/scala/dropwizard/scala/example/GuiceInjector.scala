@@ -6,6 +6,7 @@ import com.google.inject.{Guice, Injector, Module, TypeLiteral}
 
 import scala.collection.JavaConversions._
 import scala.reflect._
+import scala.language.implicitConversions
 
 object GuiceInjector {
 
