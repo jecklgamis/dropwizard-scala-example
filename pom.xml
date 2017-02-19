@@ -11,9 +11,9 @@
     <name>dropwizard-scala-example</name>
 
     <properties>
-        <dropwizard.version>1.0.4</dropwizard.version>
-        <scala.version>2.12.0</scala.version>
-        <jackson.version>2.7.8</jackson.version>
+        <dropwizard.version>1.0.6</dropwizard.version>
+        <scala.version>2.12.1</scala.version>
+        <jackson.version>2.8.6</jackson.version>
     </properties>
 
     <dependencies>
@@ -81,7 +81,7 @@
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.module</groupId>
-            <artifactId>jackson-module-scala_2.12.0-RC1</artifactId>
+            <artifactId>jackson-module-scala_2.12</artifactId>
             <version>${jackson.version}</version>
         </dependency>
         <dependency>
@@ -91,8 +91,8 @@
         </dependency>
         <dependency>
             <groupId>org.scalatest</groupId>
-            <artifactId>scalatest_2.12.0-M5</artifactId>
-            <version>3.0.0</version>
+            <artifactId>scalatest_2.12</artifactId>
+            <version>3.0.1</version>
             <scope>test</scope>
         </dependency>
         <dependency>
