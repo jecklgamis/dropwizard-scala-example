@@ -35,7 +35,7 @@ class ExampleApp extends io.dropwizard.Application[ExampleAppConfig] {
   private def jacksonJaxbJsonProvider: JacksonJaxbJsonProvider = {
     val provider = new JacksonJaxbJsonProvider()
     val objectMapper = new ObjectMapper()
-    objectMapper.registerModule(new DefaultScalaModule)
+    objectMapper.registerModule(DefaultScalaModule)
     objectMapper.registerModule(new JodaModule)
     objectMapper.configure(SerializationFeature.WRAP_ROOT_VALUE, false)
     objectMapper.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false)
