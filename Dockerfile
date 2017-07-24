@@ -19,5 +19,8 @@ RUN chmod +x /usr/local/app/bin/run-app.sh
 EXPOSE 8080
 EXPOSE 8081
 
-CMD ["/usr/bin/supervisord"]
+CMD ["/usr/local/app/bin/run-app.sh"]
+
+# or use the supervisor to start the app (see app-supervisor.conf)
+#CMD ["/usr/bin/supervisord"]
 
