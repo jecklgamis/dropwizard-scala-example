@@ -12,7 +12,7 @@ Ensure you Java 8 and Maven 3 installed.
 ```
 mvn clean package
 ```
-# Running The App
+## Running The App
 ```
 java -jar target/dropwizard-scala-example.jar server src/main/resources/config.yml
 ```
