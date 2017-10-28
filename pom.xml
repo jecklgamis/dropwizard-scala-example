@@ -11,9 +11,9 @@
     <name>dropwizard-scala-example</name>
 
     <properties>
-        <dropwizard.version>1.1.2</dropwizard.version>
-        <scala.version>2.12.2</scala.version>
-        <jackson.version>2.8.9</jackson.version>
+        <dropwizard.version>1.2.0</dropwizard.version>
+        <scala.version>2.12.3</scala.version>
+        <jackson.version>2.9.1</jackson.version>
     </properties>
 
     <dependencies>
@@ -26,48 +26,17 @@
             <groupId>io.dropwizard</groupId>
             <artifactId>dropwizard-core</artifactId>
             <version>${dropwizard.version}</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.glassfish.hk2.external</groupId>
-                    <artifactId>javax.inject</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>org.glassfish.hk2.external</groupId>
-                    <artifactId>aopalliance-repackaged</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
         <dependency>
             <groupId>io.dropwizard</groupId>
             <artifactId>dropwizard-testing</artifactId>
             <version>${dropwizard.version}</version>
             <scope>test</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.glassfish.hk2.external</groupId>
-                    <artifactId>javax.inject</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>joda-time</groupId>
-            <artifactId>joda-time</artifactId>
-            <version>2.9.4</version>
         </dependency>
         <dependency>
             <groupId>org.joda</groupId>
             <artifactId>joda-convert</artifactId>
             <version>1.8.1</version>
-        </dependency>
-        <dependency>
-            <groupId>com.google.inject</groupId>
-            <artifactId>guice</artifactId>
-            <version>4.1.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.google.inject.extensions</groupId>
-            <artifactId>guice-multibindings</artifactId>
-            <version>4.1.0</version>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.module</groupId>
