@@ -2,6 +2,12 @@ server:
   applicationConnectors:
    - type: http
      port: 8080
+   - type: https
+     port: 8443
+     certAlias: www.jecklgamis.com
+     keyStorePath: keystore.jks
+     keyStorePassword: changeit
+     validateCerts: false
   adminConnectors:
     - type: http
       port: 8081

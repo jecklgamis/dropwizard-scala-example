@@ -13,10 +13,6 @@ class ExampleApp extends io.dropwizard.Application[ExampleAppConfig] {
   override def getName: String = "dropwizard-scala-example"
 
   override def run(t: ExampleAppConfig, env: Environment): Unit = {
-    configure(t, env)
-  }
-
-  def configure(config: ExampleAppConfig, env: Environment) {
     env.jersey().register(new RootResource)
     env.jersey().register(new ExampleResource)
     env.jersey.register(jacksonJaxbJsonProvider)

@@ -20,7 +20,7 @@ class RootResourceIntTest {
   def ensureRootEndPointOk(): Unit = {
     val response = TestHttpClient.create.target(s"http://127.0.0.1:${testSupport.getLocalPort}/").request().get(classOf[Response])
     assertEquals(200, response.getStatus)
-    assertEquals("application/json", response.getHeaders.getFirst("Content-Type"))
+    assertEquals("application/json", response.getHeaders.getFirst("Content-Type").asInstanceOf[String].split(';')(0))
     val entity = response.readEntity(classOf[Map[String, String]])
     assertEquals("It works for sure!", entity("message"))
   }
