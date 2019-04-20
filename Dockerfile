@@ -14,7 +14,7 @@ COPY keystore.jks /usr/local/app/
 RUN chown -R app:app /usr/local/app
 RUN chmod +x /usr/local/app/bin/docker-entrypoint.sh
 
-EXPOSE 8080c
+EXPOSE 8080
 EXPOSE 8081
 EXPOSE 8443
 
