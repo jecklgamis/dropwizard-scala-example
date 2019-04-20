@@ -1,4 +1,4 @@
-FROM jecklgamis/oracle-java-runtime:latest
+FROM jecklgamis/java-runtime:latest
 MAINTAINER Jerrico Gamis <jecklgamis@gmail.com>
 
 RUN groupadd -r app && useradd -r -gapp app
@@ -14,7 +14,7 @@ COPY keystore.jks /usr/local/app/
 RUN chown -R app:app /usr/local/app
 RUN chmod +x /usr/local/app/bin/docker-entrypoint.sh
 
-EXPOSE 8080
+EXPOSE 8080c
 EXPOSE 8081
 EXPOSE 8443
 
