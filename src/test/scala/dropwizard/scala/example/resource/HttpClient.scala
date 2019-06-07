@@ -1,13 +1,12 @@
 package dropwizard.scala.example.resource
 
-import javax.ws.rs.client.Client
-
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.jaxrs.json.JacksonJaxbJsonProvider
 import com.fasterxml.jackson.module.scala.DefaultScalaModule
+import javax.ws.rs.client.Client
 import org.glassfish.jersey.client.{ClientConfig, JerseyClientBuilder}
 
-object TestHttpClient {
+object HttpClient {
 
   def create: Client = {
     val config = new ClientConfig()

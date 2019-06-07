@@ -1,10 +1,10 @@
 package dropwizard.scala.example.filter
 
 import java.util.UUID
+
 import javax.servlet.http.HttpServletRequest
 import javax.ws.rs.container.{ContainerRequestContext, ContainerRequestFilter, ContainerResponseContext, ContainerResponseFilter}
 import javax.ws.rs.core.Context
-
 import org.slf4j.{LoggerFactory, MDC}
 
 class DiagnosticContextFilter extends ContainerRequestFilter with ContainerResponseFilter {
