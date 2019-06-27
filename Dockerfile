@@ -9,7 +9,7 @@ RUN mkdir -m 0755 -p /usr/local/app/logs/
 COPY target/dropwizard-scala-example.jar /usr/local/app/bin
 COPY docker-entrypoint.sh /usr/local/app/bin
 COPY src/main/resources/config.yml /usr/local/app/config
-COPY keystore.jks /usr/local/app/
+COPY src/main/resources/keystore.pfx /usr/local/app
 
 RUN chown -R app:app /usr/local/app
 RUN chmod +x /usr/local/app/bin/docker-entrypoint.sh
