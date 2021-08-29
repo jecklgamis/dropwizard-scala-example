@@ -11,8 +11,8 @@
     <name>dropwizard-scala-example</name>
 
     <properties>
-        <dropwizard.version>2.0.16</dropwizard.version>
-        <scala.version>2.13.4</scala.version>
+        <dropwizard.version>2.0.24</dropwizard.version>
+        <scala.version>2.13.6</scala.version>
         <jackson.version>2.10.5</jackson.version>
     </properties>
 

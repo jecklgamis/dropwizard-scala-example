@@ -1,12 +1,14 @@
 ## Dropwizard Scala Example
 
-[![Build Status](https://travis-ci.org/jecklgamis/dropwizard-scala-example.svg?branch=master)](https://travis-ci.org/jecklgamis/dropwizard-scala-example)
+[![Build](https://github.com/jecklgamis/dropwizard-scala-example/actions/workflows/build.yml/badge.svg)](https://github.com/jecklgamis/dropwizard-scala-example/actions/workflows/build.yml)
+
 
 This is an example Dropwizard app using Scala. 
 
 ## Running The App 
 Ensure you have Java 8 or later.
 ```
+./generate-keystore.sh
 mvn clean package
 java -jar target/dropwizard-scala-example.jar
 ```
