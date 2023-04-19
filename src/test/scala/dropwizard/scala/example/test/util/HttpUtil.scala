@@ -2,10 +2,10 @@ package dropwizard.scala.example.test.util
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.datatype.joda.JodaModule
-import com.fasterxml.jackson.jaxrs.json.JacksonJaxbJsonProvider
+import com.fasterxml.jackson.jakarta.rs.json.JacksonJsonProvider
 import com.fasterxml.jackson.module.scala.DefaultScalaModule
-import javax.ws.rs.client.{Client, Entity}
-import javax.ws.rs.core.Response
+import jakarta.ws.rs.client.{Client, Entity}
+import jakarta.ws.rs.core.Response
 import org.glassfish.jersey.client.ClientProperties.{CONNECT_TIMEOUT, READ_TIMEOUT}
 import org.glassfish.jersey.client.{ClientConfig, JerseyClientBuilder}
 import org.glassfish.jersey.media.multipart.MultiPartFeature
@@ -42,8 +42,8 @@ object JerseyHttpClientFactory {
     client
   }
 
-  private def jacksonJaxbJsonProvider: JacksonJaxbJsonProvider = {
-    val provider = new JacksonJaxbJsonProvider()
+  private def jacksonJaxbJsonProvider: JacksonJsonProvider = {
+    val provider = new JacksonJsonProvider()
     val objectMapper = new ObjectMapper()
     objectMapper.registerModule(new DefaultScalaModule)
     objectMapper.registerModule(new JodaModule)

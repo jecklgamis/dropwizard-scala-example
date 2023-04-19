@@ -13,14 +13,7 @@ run-bash:
 	docker run -i -t $(IMAGE_NAME):$(IMAGE_TAG) /bin/bash
 keystore:
 	@./generate-keystore.sh
+chart:
+	cd deployment/k8s/helm && make package
 all: dist image
-push:
-	 docker push $(IMAGE_NAME):$(IMAGE_TAG)
-	 docker push $(IMAGE_NAME):latest
-tag:
-	 git tag -m "dropwizard-java-example-v$(IMAGE_TAG)" -a "v$(IMAGE_TAG)"
-	 git push --tags
-release-it: dist image push
-	cd deployment/k8s && ./create-k8s-files.py --version $(IMAGE_TAG)
-	kubectl apply -f deployment/k8s/deployment-$(IMAGE_TAG).yaml
-
+up: all run
