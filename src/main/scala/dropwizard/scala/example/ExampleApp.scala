@@ -3,9 +3,9 @@ package dropwizard.scala.example
 import dropwizard.scala.example.filter.DiagnosticContextFilter
 import dropwizard.scala.example.health.DefaultHealthCheck
 import dropwizard.scala.example.resource.RootResource
-import io.dropwizard.setup.Environment
+import io.dropwizard.core.setup.Environment
 
-class ExampleApp extends io.dropwizard.Application[ExampleAppConfig] {
+class ExampleApp extends io.dropwizard.core.Application[ExampleAppConfig] {
 
   override def run(config: ExampleAppConfig, env: Environment): Unit = {
     env.jersey().register(new RootResource(config.appName))

@@ -6,7 +6,7 @@ import java.util.concurrent.ConcurrentHashMap
 import dropwizard.scala.example.{ExampleApp, ExampleAppConfig}
 import io.dropwizard.testing.ResourceHelpers.resourceFilePath
 import io.dropwizard.testing.{ConfigOverride, DropwizardTestSupport}
-import io.dropwizard.{Application, Configuration}
+import io.dropwizard.core.{Application, Configuration}
 import org.slf4j.LoggerFactory
 
 import scala.collection.mutable
