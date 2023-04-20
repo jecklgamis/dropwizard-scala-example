@@ -2,6 +2,7 @@
 
 [![Build](https://github.com/jecklgamis/dropwizard-scala-example/actions/workflows/build.yml/badge.svg)](https://github.com/jecklgamis/dropwizard-scala-example/actions/workflows/build.yml)
 
+Docker: `docker run -p 8080:8080 -it jecklgamis/dropwizard-scala-example:main`
 
 This is an example Dropwizard app using Scala. 
 
