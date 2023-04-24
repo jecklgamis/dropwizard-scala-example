@@ -9,7 +9,6 @@ This is an example Dropwizard app using Scala.
 ## Running The App 
 Ensure you have Java 11 or later.
 ```
-./generate-keystore.sh
 mvn clean package
 java -jar target/dropwizard-scala-example.jar
 ```
