@@ -7,7 +7,7 @@ import jakarta.ws.rs.{GET, Path, Produces}
 class ProbeResource {
 
   @GET
-  @Path("/alive")
+  @Path("/live")
   @Produces(Array(MediaType.APPLICATION_JSON))
   def live: Response = {
     Response.ok.entity(Map("message" -> "I'm alive!")

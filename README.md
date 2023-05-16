@@ -56,7 +56,7 @@ This creates:
 * a pod running on port 8080
 * a service listening on port 80
 * a deployment
-* a ingress
+* an ingress
 
 To connect to the app locally, create a tunnel to the service:
 
