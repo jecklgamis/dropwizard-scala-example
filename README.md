@@ -56,19 +56,19 @@ This creates:
 * a pod running on port 8080
 * a service listening on port 80
 * a deployment
-* an ingress
+* an ingress using Nginx
 
 To connect to the app locally, create a tunnel to the service:
 
 ```bash
-kubectl port-forward service/dropwizard-scala-example 80:80
-curl http://localhost:80
+kubectl port-forward service/dropwizard-scala-example 8080:80
+curl http://localhost:8080
 ```
 
 If you have ingress controller installed in your cluster, you can connect using
 
 ````
-curl -v -H "Host:dropwizard-scala-example.local" https://<your-ingress-load-balancer-hostname>
+curl -k -v -H "Host:dropwizard-scala-example.local" https://<your-ingress-load-balancer-dns>
 ````
 
 ## Contributing
