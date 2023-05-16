@@ -26,19 +26,19 @@ java -jar target/dropwizard-scala-example.jar
 Ensure you have a working Docker environment.
 
 ```
-make dist image run
+make up
 ```
 
 ## Endpoints
 
 ```
-curl -v  http://localhost:8080/
-curl -v -k https://localhost:8081/
+curl -v http://localhost:8080/
+curl -v http://localhost:8081/
 ```
 
 ## Deploying To Kubernetes
 
-Assumptions:
+Ensure:
 
 * You have `helm`command installed (Mac OS: `brew install helm`)
 * You can deploy to a Kubernetes cluster that can access Docker Hub
@@ -56,7 +56,7 @@ This creates:
 * a pod running on port 8080
 * a service listening on port 80
 * a deployment
-* an ingress using Nginx
+* an ingress 
 
 To connect to the app locally, create a tunnel to the service:
 
