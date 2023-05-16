@@ -2,7 +2,7 @@ package dropwizard.scala.example
 
 import dropwizard.scala.example.filter.DiagnosticContextFilter
 import dropwizard.scala.example.health.DefaultHealthCheck
-import dropwizard.scala.example.resource.RootResource
+import dropwizard.scala.example.resource.{ProbeResource, RootResource}
 import io.dropwizard.core.setup.Environment
 
 class ExampleApp extends io.dropwizard.core.Application[ExampleAppConfig] {
@@ -11,6 +11,7 @@ class ExampleApp extends io.dropwizard.core.Application[ExampleAppConfig] {
     env.jersey().register(new RootResource(config.appName))
     env.jersey.register(new CustomJacksonJaxbJsonProvider)
     env.jersey.register(new DiagnosticContextFilter)
+    env.jersey.register(new ProbeResource)
     env.healthChecks().register("default", new DefaultHealthCheck)
   }
 }
