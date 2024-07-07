@@ -15,7 +15,7 @@ This is an example Dropwizard app using Scala.
 
 ## Running The App
 
-Ensure you have Java 11 or later.
+Ensure you have Java 21 or later.
 
 ```
 mvn clean package
