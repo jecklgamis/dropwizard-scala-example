@@ -3,7 +3,7 @@ package dropwizard.scala.example.test.util
 import java.util.Base64
 import java.util.concurrent.ConcurrentHashMap
 
-import dropwizard.scala.example.{ExampleApp, ExampleAppConfig}
+import dropwizard.scala.example.{App, AppConfig}
 import io.dropwizard.testing.ResourceHelpers.resourceFilePath
 import io.dropwizard.testing.{ConfigOverride, DropwizardTestSupport}
 import io.dropwizard.core.{Application, Configuration}
@@ -13,8 +13,8 @@ import scala.collection.mutable
 
 trait AppTestSupport {
 
-  def withAppRunning[T](config: String = "config.yml")(fn: DropwizardTestSupport[ExampleAppConfig] => T): T = {
-    val server = DropwizardTestSupportFactory.get(classOf[ExampleApp], resourceFilePath(config))
+  def withAppRunning[T](config: String = "config.yaml")(fn: DropwizardTestSupport[AppConfig] => T): T = {
+    val server = DropwizardTestSupportFactory.get(classOf[App], resourceFilePath(config))
     server.before()
     try {
       fn(server)

@@ -2,13 +2,14 @@
 
 [![Build](https://github.com/jecklgamis/dropwizard-scala-example/actions/workflows/build.yml/badge.svg)](https://github.com/jecklgamis/dropwizard-scala-example/actions/workflows/build.yml)
 
-Docker: `docker run -p 8080:8080 -it jecklgamis/dropwizard-scala-example:main`
+Docker: `docker run -p 8080:8080 -p 8081:8081 -it jecklgamis/dropwizard-scala-example:main`
 
 This is an example Dropwizard app using Scala.
 
 ## What's In The Box?
 
-* Dropwizard 4
+* JDK 21
+* Dropwizard 5.x
 * Scala 2.13
 * Kubernetes deployment
 

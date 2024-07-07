@@ -5,9 +5,9 @@ import dropwizard.scala.example.health.DefaultHealthCheck
 import dropwizard.scala.example.resource.{ProbeResource, RootResource}
 import io.dropwizard.core.setup.Environment
 
-class ExampleApp extends io.dropwizard.core.Application[ExampleAppConfig] {
+class App extends io.dropwizard.core.Application[AppConfig] {
 
-  override def run(config: ExampleAppConfig, env: Environment): Unit = {
+  override def run(config: AppConfig, env: Environment): Unit = {
     env.jersey().register(new RootResource(config.appName))
     env.jersey.register(new CustomJacksonJaxbJsonProvider)
     env.jersey.register(new DiagnosticContextFilter)
@@ -17,6 +17,6 @@ class ExampleApp extends io.dropwizard.core.Application[ExampleAppConfig] {
 }
 
 
-object ExampleApp {
-  def main(args: Array[String]): Unit = new ExampleApp().run(args: _*)
+object App {
+  def main(args: Array[String]): Unit = new App().run(args: _*)
 }

@@ -3,7 +3,7 @@ package dropwizard.scala.example
 import dropwizard.scala.example.test.util.{AppTestSupport, HttpUtil, IntegrationFlatSpec}
 
 
-class ExampleAppIntSpec extends IntegrationFlatSpec with AppTestSupport {
+class AppIntSpec extends IntegrationFlatSpec with AppTestSupport {
 
   "App" should "bootstrap ok" in {
     withAppRunning() { server =>
