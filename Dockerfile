@@ -1,7 +1,9 @@
-FROM amd64/eclipse-temurin:21-jre-jammy
-MAINTAINER Jerrico Gamis <jecklgamis@gmail.com>
+FROM ubuntu:24.04
+LABEL org.opencontainers.image.authors="jecklgamis@gmail.com"
 
-ENV APP_HOME /app
+RUN apt update -y && apt install -y openjdk-21-jre-headless && rm -rf /var/lib/apt/lists/*
+
+ENV APP_HOME=/app
 
 RUN groupadd -r app && useradd -r -gapp app
 RUN mkdir -m 0755 -p $APP_HOME/bin
