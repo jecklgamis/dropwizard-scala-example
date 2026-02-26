@@ -11,7 +11,7 @@ import jakarta.ws.rs.ext.Provider
 object CustomJacksonJaxbJsonProvider {
   private val objectMapper = new ObjectMapper
   objectMapper.registerModule(new JavaTimeModule)
-  objectMapper.registerModule(new DefaultScalaModule)
+  objectMapper.registerModule(DefaultScalaModule)
 }
 
 @Provider

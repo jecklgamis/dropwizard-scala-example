@@ -18,5 +18,5 @@ class App extends io.dropwizard.core.Application[AppConfig] {
 
 
 object App {
-  def main(args: Array[String]): Unit = new App().run(args: _*)
+  def main(args: Array[String]): Unit = new App().run(args *)
 }

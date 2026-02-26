@@ -54,7 +54,7 @@ object DropwizardTestSupportFactory {
       configOverrides.foreach(o => overrides += o)
       overrides += ConfigOverride.config("server.applicationConnectors[0].port", PortUtil.unused().toString)
       overrides += ConfigOverride.config("server.adminConnectors[0].port", PortUtil.unused().toString)
-      val support = new DropwizardTestSupport[C](appClass, configPath, overrides.toSeq: _*)
+      val support = new DropwizardTestSupport[C](appClass, configPath, overrides.toSeq*)
       cache.put(cacheKey, support)
       log.info(s"Stored to cache $cacheKey")
       support
