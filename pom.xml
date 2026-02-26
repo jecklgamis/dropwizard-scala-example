@@ -37,23 +37,11 @@
             <artifactId>dropwizard-testing</artifactId>
             <scope>test</scope>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>com.fasterxml.jackson.module</groupId>-->
-<!--            <artifactId>jackson-module-scala_2.13</artifactId>-->
-<!--        </dependency>-->
         <dependency>
             <groupId>com.fasterxml.jackson.module</groupId>
             <artifactId>jackson-module-scala_3</artifactId>
             <version>2.21.1</version>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>com.fasterxml.jackson.datatype</groupId>-->
-<!--            <artifactId>jackson-datatype-joda</artifactId>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>org.glassfish.jersey.media</groupId>-->
-<!--            <artifactId>jersey-media-multipart</artifactId>-->
-<!--        </dependency>-->
         <dependency>
             <groupId>org.scalatest</groupId>
             <artifactId>scalatest_3</artifactId>
