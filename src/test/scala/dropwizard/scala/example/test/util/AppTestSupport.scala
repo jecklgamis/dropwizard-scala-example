@@ -26,13 +26,13 @@ trait AppTestSupport {
 
 
 class DropwizardTestSupportCache {
-  private val instances = new ConcurrentHashMap[String, DropwizardTestSupport[_ <: Configuration]]()
+  private val instances = new ConcurrentHashMap[String, DropwizardTestSupport[? <: Configuration]]()
 
-  def get(key: String): Option[DropwizardTestSupport[_ <: Configuration]] = {
+  def get(key: String): Option[DropwizardTestSupport[? <: Configuration]] = {
     if (instances.containsKey(key)) Some(instances.get(key)) else None
   }
 
-  def put(key: String, testSupport: DropwizardTestSupport[_ <: Configuration]): Unit = {
+  def put(key: String, testSupport: DropwizardTestSupport[? <: Configuration]): Unit = {
     instances.put(key, testSupport)
   }
 }
@@ -43,7 +43,7 @@ object DropwizardTestSupportFactory {
 
   private def keyFrom(configPath: String): String = Base64.getEncoder.encodeToString(configPath.getBytes)
 
-  def get[C <: Configuration](appClass: Class[_ <: Application[C]], configPath: String,
+  def get[C <: Configuration](appClass: Class[? <: Application[C]], configPath: String,
                               configOverrides: ConfigOverride*): DropwizardTestSupport[C] = {
     val cacheKey = keyFrom(configPath)
     if (cache.get(cacheKey).isDefined) {

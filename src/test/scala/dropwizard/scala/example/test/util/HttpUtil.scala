@@ -19,7 +19,7 @@ object HttpUtil {
     client.target(url).request().get(responseClass)
   }
 
-  def post[T](url: String, entity: Entity[_], responseClass: Class[T]): T = {
+  def post[T](url: String, entity: Entity[?], responseClass: Class[T]): T = {
     client.target(url).request().post(entity, responseClass)
   }
 

@@ -6,13 +6,14 @@ import jakarta.ws.rs.core.Context
 import org.slf4j.{LoggerFactory, MDC}
 
 import java.util.UUID
+import scala.compiletime.uninitialized
 
 class DiagnosticContextFilter extends ContainerRequestFilter with ContainerResponseFilter {
   private val log = LoggerFactory.getLogger(classOf[DiagnosticContextFilter])
   private val REQUEST_ID_KEY = "id"
 
   @Context
-  protected var r: HttpServletRequest = _
+  protected var r: HttpServletRequest = uninitialized
 
   override def filter(requestContext: ContainerRequestContext): Unit = {
     val id = UUID.randomUUID().toString
